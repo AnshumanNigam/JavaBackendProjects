@@ -10,9 +10,11 @@ public class WritingFile {
 
         try (FileWriter writer = new FileWriter(filepath)) {
             writer.write(text);
+            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        object.close();
     }
 }
 
